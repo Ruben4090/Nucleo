@@ -112,3 +112,56 @@ main .content p {
 /* ==========================================================================
    FIN MAIN
    ========================================================================== */
+
+/* ==========================================================================
+   MÓVIL / RESPONSIVE DESIGN (Pantallas menores a 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Ajustamos el Navbar para que no se amontone */
+  .header__container .navbar {
+    flex-direction: column; /* Apila el logo, menú y botón uno abajo del otro */
+    padding: 1em; /* Reducimos el padding exagerado del 10% */
+    gap: 1em; /* Añade separación limpia entre los elementos */
+  }
+
+  .header__container .navbar ul {
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap; /* Si los enlaces no caben a lo ancho, bajan solitos */
+  }
+
+  .header__container .navbar ul li {
+    margin: 5px 10px; /* Reducimos el margen entre enlaces para que quepan */
+  }
+
+  /* Reorganizamos el bloque principal de la página */
+  main {
+    flex-direction: column-reverse; /* Apila el contenido verticalmente (primero el texto, abajo la imagen) */
+    width: 90%; /* Aprovecha mejor el ancho en pantallas pequeñas */
+    margin: 2em auto; /* Margen superior más prudente para móvil */
+    gap: 2em; /* Separación entre el texto y la imagen */
+  }
+
+  /* El bloque de texto ahora ocupa el espacio correcto */
+  main .content {
+    width: 100%; /* Pasa de 40% a 100% para leerse cómodo */
+  }
+
+  main .content h2 {
+    font-size: 2em; /* Achicamos un poco el título en el teléfono */
+    text-align: center;
+  }
+
+  main .content p {
+    margin-top: 1em;
+    font-size: 1.1em;
+  }
+
+  /* La imagen ya no se estira ni deforma */
+  main .images img {
+    height: auto; /* Liberamos los 400px rígidos para que mantenga proporción */
+    max-width: 100%; /* No permite que la imagen sea más ancha que el teléfono */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+  }
+}
