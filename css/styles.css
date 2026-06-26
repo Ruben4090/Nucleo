@@ -94,23 +94,31 @@ body {
    ========================================================================== */
 /* Contenedor principal de contenido */
 main {
-  display: flex; /* Activa diseño flexible para alinear texto e imagen */
-  align-items: center; /* Centrado vertical */
-  justify-content: space-between; /* Espacio entre el texto y la imagen */
-  width: 80%; /* Ancho del contenedor principal */
-  margin: 5em auto; /* Centra el bloque horizontalmente con margen superior e inferior */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Cambiamos space-between por center */
+  gap: 5%; /* Añade espacio fijo entre elementos en lugar de forzar los bordes */
+  width: 90%; /* Un poco más de espacio para que no se vea apretado */
+  max-width: 1200px; /* Evita que en pantallas gigantes se separe demasiado */
+  margin: 5em auto;
+  flex-wrap: wrap; /* Esto permite que la imagen baje si el texto es muy ancho */
 }
 
 /* Estilo de la imagen principal */
 main .images img {
-  width: auto; /* Ancho ajustado automáticamente */
-  height: 400px; /* Altura fija */
-  max-width: 100%; /* Evita que la imagen sobresalga del contenedor */
+  max-width: 100%; /* Nunca será más ancha que el contenedor */
+  max-height: 400px; /* Altura máxima para que no sea excesiva */
+  width: auto; /* Mantiene la proporción al cambiar de tamaño */
+  height: auto; /* Crucial para que no se deforme */
+  object-fit: contain; /* Asegura que la imagen completa se vea sin recortarse */
+  display: block;
+  margin: 0 auto; /* Centrado perfecto */
 }
 
 /* Contenedor del bloque de texto */
 main .content {
-  width: 40%; /* El texto ocupa el 40% del ancho del main */
+  flex: 1; /* El contenido tomará el espacio disponible */
+  min-width: 300px; /* Asegura que no se haga demasiado pequeño en móviles */
 }
 
 /* Estilo del encabezado h2 */
