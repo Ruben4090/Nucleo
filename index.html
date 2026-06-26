@@ -1,12 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <link rel="stylesheet" href="css\styles.css" />
-    <!--esto conecta el html con el css-->
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
     <title>Document</title>
   </head>
 
@@ -17,10 +15,11 @@
           <img src="images/logo.png" alt="Logo" />
         </div>
         <ul>
-          <li><a href="#">Muestra 1</a></li>
-          <li><a href="#">Muestra 2</a></li>
-          <li><a href="#">Muestra 3</a></li>
-          <li><a href="#">Muestra 4</a></li>
+          <li><a href="#" data-target="inicio">Inicio</a></li>
+          <li><a href="#" data-target="muestra1">Muestra 1</a></li>
+          <li><a href="#" data-target="muestra2">Muestra 2</a></li>
+          <li><a href="#" data-target="muestra3">Muestra 3</a></li>
+          <li><a href="#" data-target="muestra4">Muestra 4</a></li>
         </ul>
         <button type="button">
           <a href="https://www.instagram.com/ruben.ortigoza.47/">Creador</a>
@@ -28,21 +27,50 @@
       </nav>
     </header>
 
-    <main>
-      <div class="content">
-        <h2>Pagina Web de Prueba</h2>
-        <p>
-          Esta es una pagina web de prueba, creada por Ruben Ortigoza, con el
-          fin de aprender a crear paginas web, incluira varios diseños y
-          estilos.
-        </p>
-      </div>
-      <div class="images">
-        <img src="images/prueba.webp" alt="imagen de prueba" />
-      </div>
+    <main id="main-content">
+      <section id="inicio" class="page active">
+        <div class="content">
+          <h2>Pagina Web de Prueba</h2>
+          <p>
+            Esta es una pagina web de prueba, creada por Ruben Ortigoza, con el
+            fin de aprender a crear paginas web, incluira varios diseños y
+            estilos.
+          </p>
+        </div>
+        <div class="images">
+          <img src="images/prueba.webp" alt="imagen de prueba" />
+        </div>
+      </section>
+
+      <section id="muestra1" class="page">
+        <div class="content">
+          <h2>Muestra 1</h2>
+          <p>Contenido detallado de la primera muestra.</p>
+        </div>
+      </section>
+
+      <section id="muestra2" class="page">
+        <div class="content">
+          <h2>Muestra 2</h2>
+          <p>Contenido detallado de la segunda muestra.</p>
+        </div>
+      </section>
+
+      <section id="muestra3" class="page">
+        <div class="content">
+          <h2>Muestra 3</h2>
+          <p>Contenido detallado de la tercera muestra.</p>
+        </div>
+      </section>
+
+      <section id="muestra4" class="page">
+        <div class="content">
+          <h2>Muestra 4</h2>
+          <p>Contenido detallado de la cuarta muestra.</p>
+        </div>
+      </section>
     </main>
 
-    <script src="js\script.js"></script>
-    <!--esto conecta el html con el js-->
+    <script src="js/script.js"></script>
   </body>
 </html>

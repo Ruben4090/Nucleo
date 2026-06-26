@@ -183,3 +183,32 @@ main .content p {
     margin: 0 auto; /* Centra la imagen */
   }
 }
+/* ==========================================================================
+   NUEVA LÓGICA DE NAVEGACIÓN DINÁMICA (SPA)
+   ========================================================================== */
+
+/* Por defecto, todas las secciones (clase 'page') están ocultas */
+.page {
+  display: none;
+}
+
+/* Solo la sección con la clase 'active' se mostrará en pantalla */
+.page.active {
+  display: flex; /* Mantenemos el formato flex para que conserve tu diseño */
+  animation: fadeIn 0.5s ease; /* Pequeña animación de entrada para suavizar el cambio */
+}
+
+/* Definición de la animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opcional: Estilo para resaltar visualmente el enlace activo en el menú */
+.navbar ul li a.active {
+  color: #ca0752; /* Cambia el color del texto cuando la sección está activa */
+}
