@@ -1,77 +1,89 @@
+/* Reseteo y estilos globales para el cuerpo de la página */
 body {
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-  background-color: #48ff00c4;
+  margin: 0; /* Elimina márgenes externos predeterminados del navegador */
+  padding: 0px; /* Elimina el relleno interno predeterminado */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el cálculo del ancho total */
+  background-color: #80808088; /* Define un color de fondo gris semitransparente */
 }
 
 /* ==========================================================================
    HEADER / ESTILO DE NAVBAR 
    ========================================================================== */
+/* Contenedor principal del encabezado */
 .header__container {
-  height: auto;
-  width: 100%;
-  background-color: #333333;
+  height: auto; /* Altura ajustada automáticamente al contenido */
+  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+  background-color: #333333; /* Color de fondo oscuro */
 }
 
+/* Barra de navegación interna */
 .header__container .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
+  display: flex; /* Activa el diseño flexible para alinear elementos */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  justify-content: space-between; /* Distribuye el espacio uniformemente entre los elementos */
+  padding: 0 10%; /* Añade relleno horizontal del 10% a los lados */
 }
 
+/* Imagen del logo dentro del navbar */
 .header__container .navbar .logo img {
-  width: 7em;
-  padding: 1em;
-  cursor: pointer;
+  width: 7em; /* Define el ancho en unidades relativas */
+  padding: 1em; /* Añade espacio alrededor de la imagen */
+  cursor: pointer; /* Cambia el cursor al pasar sobre él */
 }
 
+/* Lista desordenada dentro del navbar */
 .header__container .navbar ul {
-  display: flex;
+  display: flex; /* Alinea los elementos de la lista en fila */
 }
 
+/* Elementos de la lista (li) */
 .header__container .navbar ul li {
-  list-style: none;
-  margin: 0 20px;
+  list-style: none; /* Elimina los puntos o viñetas de la lista */
+  margin: 0 20px; /* Crea espacio horizontal entre cada opción */
 }
 
+/* Enlaces (a) dentro de los elementos de la lista */
 .header__container .navbar ul li a {
-  color: #f4f4f4;
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
+  color: #f4f4f4; /* Color de texto claro */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+  font-family:
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Define la tipografía */
+  position: relative; /* Necesario para posicionar el pseudo-elemento ::after */
 }
 
+/* Pseudo-elemento decorativo para animación de subrayado */
 .header__container .navbar ul li a::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #f4f4f4;
-  transition: width 0.3s ease-in-out;
+  position: absolute; /* Posicionamiento relativo al enlace */
+  content: ""; /* Crea un elemento vacío necesario para mostrarlo */
+  left: 0; /* Alineado a la izquierda */
+  bottom: 0; /* Alineado en la parte inferior */
+  width: 0; /* Ancho inicial oculto */
+  height: 2px; /* Grosor de la línea */
+  background: #f4f4f4; /* Color de la línea */
+  transition: width 0.3s ease-in-out; /* Suaviza el cambio de ancho en 0.3 segundos */
 }
 
+/* Efecto al pasar el cursor sobre el enlace */
 .header__container .navbar ul li a:hover::after {
-  width: 100%;
+  width: 100%; /* Expande el subrayado a todo el ancho del enlace */
 }
 
+/* Botón de acción (CTA) */
 .header__container .navbar button {
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 700;
-  color: #f4f4f4;
-  background: #000000;
-  border: 2px solid #020202;
-  border-radius: 5px;
-  transition: all 0.3s;
+  cursor: pointer; /* Cambia el cursor al pasar sobre él */
+  padding: 10px 20px; /* Relleno interno del botón */
+  font-size: 700; /* Nota: font-size espera unidades, 700 suele usarse para font-weight */
+  color: #f4f4f4; /* Color del texto */
+  background: #000000; /* Fondo negro */
+  border: 2px solid #020202; /* Borde oscuro */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: all 0.3s; /* Suaviza los cambios de estilo en 0.3 segundos */
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 .header__container .navbar button:hover {
-  background: #ca0752;
-  border: 2px solid #333333;
+  background: #ca0752; /* Cambia el color de fondo a un tono rojizo */
+  border: 2px solid #333333; /* Cambia el color del borde */
 }
 /* ==========================================================================
    FIN HEADER
@@ -80,35 +92,41 @@ body {
 /* ==========================================================================
    MAIN / TEXTO E IMAGENES 
    ========================================================================== */
+/* Contenedor principal de contenido */
 main {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: 5em auto;
+  display: flex; /* Activa diseño flexible para alinear texto e imagen */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Espacio entre el texto y la imagen */
+  width: 80%; /* Ancho del contenedor principal */
+  margin: 5em auto; /* Centra el bloque horizontalmente con margen superior e inferior */
 }
 
+/* Estilo de la imagen principal */
 main .images img {
-  width: auto;
-  height: 400px;
-  max-width: 100%;
+  width: auto; /* Ancho ajustado automáticamente */
+  height: 400px; /* Altura fija */
+  max-width: 100%; /* Evita que la imagen sobresalga del contenedor */
 }
 
+/* Contenedor del bloque de texto */
 main .content {
-  width: 40%;
+  width: 40%; /* El texto ocupa el 40% del ancho del main */
 }
 
+/* Estilo del encabezado h2 */
 main .content h2 {
-  color: #333333;
-  font-size: 2.5em;
+  color: #333333; /* Color oscuro */
+  font-size: 2.5em; /* Tamaño de fuente grande */
 }
 
+/* Estilo del párrafo */
 main .content p {
-  margin-top: 2em;
-  text-align: justify;
-  font-size: 1.2em;
-  color: #333333;
+  margin-top: 2em; /* Espacio superior */
+  text-align: justify; /* Alinea el texto de forma justificada */
+  font-size: 1.2em; /* Tamaño de fuente ligeramente mayor */
+  color: #333333; /* Color oscuro */
 }
+
 /* ==========================================================================
    FIN MAIN
    ========================================================================== */
