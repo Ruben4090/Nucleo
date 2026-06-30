@@ -220,3 +220,15 @@ main .content p {
 .navbar ul li a.active {
   color: #ca0752; /* Cambia el color del texto cuando la sección está activa */
 }
+
+.video-container {
+  position: relative;
+  max-width: 0 auto;
+  margin: 0 auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 de YouTube */
+}
