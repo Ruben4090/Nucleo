@@ -221,14 +221,28 @@ main .content p {
   color: #ca0752; /* Cambia el color del texto cuando la sección está activa */
 }
 
+/* Estilo base para móvil (vertical) */
 .video-container {
-  position: relative;
-  max-width: 0 auto;
-  margin: 0 auto;
+  width: 90%; /* Un poco de aire a los lados */
+  max-width: 640px; /* Se mantiene contenido en móvil */
+  margin: 20px auto; /* Centrado y separado del texto */
 }
 
 .video-container iframe {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* Mantiene la proporción 16:9 de YouTube */
+  aspect-ratio: 9 / 16;
+  display: block;
+}
+
+/* Estilo para PC (horizontal) */
+@media (min-width: 1240px) {
+  .video-container {
+    max-width: 1200px; /* Aquí es donde el video ahora sí se ensanchará */
+    margin: 40px auto;
+  }
+
+  .video-container iframe {
+    aspect-ratio: 16 / 9; /* Formato cine en PC */
+    height: 600px; /* Altura fija grande */
+  }
 }
